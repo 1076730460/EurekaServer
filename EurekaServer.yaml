@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: EurekaServer
+  name: eurekaserver
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: EurekaServer
+        app: eurekaserver
     spec:
       containers:
-        - name: EurekaServer
-          image: EurekaServer:20190421
+        - name: eurekaserver
+          image: eurekaserver:20190421
           ports:
             - containerPort: 8671
               protocol: TCP
